@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class CharactorControl : UnitData {
 
-
+    protected TryChangePlayerState tryChangeCharactorState;
 
     void Awake()
     {
         PlayerStateMachine.RegisterState(new MoveState(this));
         PlayerStateMachine.RegisterState(new IdleState(this));
+
+        tryChangeCharactorState = new TryChangePlayerState(this);
     }
 
 	// Use this for initialization
@@ -26,7 +28,7 @@ public class CharactorControl : UnitData {
 
 
         base.Update();
-       // ControlPlayer();
+       ControlPlayer();
 
 	}
 
@@ -35,25 +37,16 @@ public class CharactorControl : UnitData {
     //通过输入的按键控制玩家
     void ControlPlayer()
     {
-        //向上走
-        if (Input.GetKey(Keyboard.moveUp))
+
+        if (tryChangeCharactorState.TryMovePlayer())
         {
-            transform.Translate(Vector3.up * 2f * Time.deltaTime);
+            //Debug.Log("改变为移动状态");
+            PlayerStateMachine.SwitchState((uint)UnitStateType.move, null, null);
         }
-        //向下走
-        if (Input.GetKey(Keyboard.moveDown))
+        else if(tryChangeCharactorState.TryIdlePlayer())
         {
-            transform.Translate(Vector3.down * 2f * Time.deltaTime);
-        }
-        //向左走
-        if (Input.GetKey(Keyboard.moveLeft))
-        {
-            transform.Translate(Vector3.left * 2f * Time.deltaTime);
-        }
-        //向右走
-        if (Input.GetKey(Keyboard.moveRight))
-        {
-            transform.Translate(Vector3.right * 2f * Time.deltaTime);
+            //Debug.Log("改变为待机状态");
+            PlayerStateMachine.SwitchState((uint)UnitStateType.idle, null, null);
         }
 		
     }

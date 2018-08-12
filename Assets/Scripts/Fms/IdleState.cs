@@ -22,7 +22,7 @@ public class IdleState : IState {
     public void OnEnter(StateMachine machine, IState preState, object param1, object param2)
     {
         //Debug.Log("进入了IDLE动画");
-        unitData.skeletonAnimation.state.SetAnimation(0, "idle", true);
+        AnimationPlay.Play(unitData,"idle");
     }
     public void OnLeave(IState nextState, object param1, object param2)
     { 
