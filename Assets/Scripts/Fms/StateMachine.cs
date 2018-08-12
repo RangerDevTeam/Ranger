@@ -83,6 +83,7 @@
       public BetweenSwitchState BetweenSwitchStateCallBack = null;
       public bool SwitchState(uint newStateID, object param1, object param2)
       {
+          //Debug.Log("当前状态为： " + mCurrentState);
           //当前状态切当前状态 false
           if (mCurrentState != null && mCurrentState.GetStateID() == newStateID)
           {
@@ -90,11 +91,14 @@
           }
           //切换到没有注册过的状态 false
           IState newState = null;
+         // Debug.Log("新状态ID " + newStateID);
           mDictionaryState.TryGetValue(newStateID, out newState);
+         // Debug.Log("新状态 " + newState);
           if (newState == null)
          {
               return false;
           }
+         // Debug.Log("新状态" + newState);
           // 退出当前状态
          if (mCurrentState != null)
          {

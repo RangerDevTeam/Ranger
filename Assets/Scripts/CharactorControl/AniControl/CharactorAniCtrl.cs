@@ -13,7 +13,7 @@ public class CharactorAniCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        PlayerMove();
+       // PlayerMove();
     }
 
     //角色移动和待机

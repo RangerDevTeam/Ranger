@@ -2,17 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharactorControl : MonoBehaviour {
+public class CharactorControl : UnitData {
+
+
+
+    void Awake()
+    {
+        PlayerStateMachine.RegisterState(new MoveState(this));
+        PlayerStateMachine.RegisterState(new IdleState(this));
+    }
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+
+        base.Start();
+
+        PlayerStateMachine.SwitchState((uint)UnitStateType.idle,null,null);
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected override void Update () {
 
-        ControlPlayer();
+
+        base.Update();
+       // ControlPlayer();
 
 	}
 
