@@ -1,6 +1,6 @@
 {
 "skeleton": {
-	"hash": "4r2SlosrXbfFODwZ3GYP7M+DpL8",
+	"hash": "mAXSN1XnR/t2EmAfj3fA6UhCsD4",
 	"spine": "3.7.09-beta",
 	"width": 620.39,
 	"height": 1043.64,
@@ -131,7 +131,9 @@
 	{ "name": "item_part_near", "bone": "item_part_near" },
 	{ "name": "item_near", "bone": "item_near" },
 	{ "name": "arm_lower_near", "bone": "arm_lower_near", "attachment": "arm_lower_near" },
-	{ "name": "hand_near", "bone": "hand_near", "attachment": "hand_1_fistBack" }
+	{ "name": "hand_near", "bone": "hand_near", "attachment": "hand_1_fistBack" },
+	{ "name": "tou", "bone": "head" },
+	{ "name": "shenti", "bone": "torso" }
 ],
 "skins": {
 	"default": {},
@@ -4466,7 +4468,9 @@
 	"Hold End": {},
 	"Hold Start": {},
 	"Move End": {},
-	"Move Start": {}
+	"Move Start": {},
+	"atk01": {},
+	"atk02": {}
 },
 "animations": {
 	"block": {
@@ -23719,7 +23723,11 @@
 					{ "time": 0.3333, "x": 1, "y": 1 }
 				]
 			}
-		}
+		},
+		"events": [
+			{ "time": 0.1333, "name": "atk01" },
+			{ "time": 0.2, "name": "atk02" }
+		]
 	},
 	"meleeSwing2": {
 		"slots": {

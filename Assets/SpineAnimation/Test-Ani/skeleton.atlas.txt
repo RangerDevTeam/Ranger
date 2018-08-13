@@ -1,6 +1,6 @@
 
 skeleton.png
-size: 1024,1024
+size: 1024,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -83,7 +83,7 @@ TurboTed/TurboTed_hand_3_open
   index: -1
 
 skeleton2.png
-size: 1024,1024
+size: 1024,1018
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -138,7 +138,7 @@ TurboTed/TurboTed_arm_upper_far
   index: -1
 
 skeleton3.png
-size: 1024,1024
+size: 1022,1022
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -200,7 +200,7 @@ TurboTed/TurboTed_arm_upper_near
   index: -1
 
 skeleton4.png
-size: 1024,1024
+size: 1018,1021
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -276,7 +276,7 @@ YoungBuck/YoungBuck_sword_3_bigSwing
   index: -1
 
 skeleton5.png
-size: 1024,1024
+size: 1016,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -436,7 +436,7 @@ TurboTed/TurboTed_neck
   index: -1
 
 skeleton6.png
-size: 1024,1024
+size: 1019,1012
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -519,7 +519,7 @@ TurboTed-Blue/TurboTed-Blue_waist
   index: -1
 
 skeleton7.png
-size: 1024,1024
+size: 1023,1012
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -616,7 +616,7 @@ TurboTed/TurboTed_hand_2_fistPalm
   index: -1
 
 skeleton8.png
-size: 1024,1024
+size: 1023,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -944,7 +944,7 @@ TruckMatthews/TruckMatthews_neck
   index: -1
 
 skeleton9.png
-size: 1024,1024
+size: 993,1020
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -1167,7 +1167,7 @@ TurboTed/TurboTed_waist
   index: -1
 
 skeleton10.png
-size: 1024,1024
+size: 1024,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -1383,7 +1383,7 @@ TurboTed-Green/TurboTed-Green_arm_lower_near
   index: -1
 
 skeleton11.png
-size: 1024,1024
+size: 1022,1021
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -1536,7 +1536,7 @@ YoungBuck/YoungBuck_sword_1
   index: -1
 
 skeleton12.png
-size: 1024,1024
+size: 1010,997
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -1703,7 +1703,7 @@ TurboTed/TurboTed_hand_1_fistBack
   index: -1
 
 skeleton13.png
-size: 1024,1024
+size: 1009,1001
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -1898,7 +1898,7 @@ TurboTed/TurboTed_foot_near_2_bent
   index: -1
 
 skeleton14.png
-size: 1024,1024
+size: 1020,1010
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -2058,7 +2058,7 @@ TurboTed-Green/TurboTed-Green_foot_near_2_bent
   index: -1
 
 skeleton15.png
-size: 1024,1024
+size: 1009,991
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -2183,7 +2183,7 @@ YoungBuck/YoungBuck_sword_2_swing
   index: -1
 
 skeleton16.png
-size: 1024,1024
+size: 1022,980
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -2364,7 +2364,7 @@ TurboTed/TurboTed_foot_near_1
   index: -1
 
 skeleton17.png
-size: 1024,1024
+size: 1022,1010
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -2496,7 +2496,7 @@ StumpyPete/StumpyPete_pistol
   index: -1
 
 skeleton18.png
-size: 1024,1024
+size: 992,1015
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -2915,7 +2915,7 @@ TurboTed/TurboTed_torso
   index: -1
 
 skeleton19.png
-size: 1024,1024
+size: 1006,974
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3159,7 +3159,7 @@ PamelaFrost-04/PamelaFrost-04_hand_near_1_fistBack
   index: -1
 
 skeleton20.png
-size: 1024,1024
+size: 984,994
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3368,7 +3368,7 @@ YoungBuck/YoungBuck_hand_near_2_fistPalm
   index: -1
 
 skeleton21.png
-size: 1024,1024
+size: 967,983
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3472,7 +3472,7 @@ TruckMatthews/TruckMatthews_sword_2_swing
   index: -1
 
 skeleton22.png
-size: 1024,1024
+size: 967,983
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3534,7 +3534,7 @@ Commander-Stonestrike/Commander-Stonestrike_sword_2_swing
   index: -1
 
 skeleton23.png
-size: 1024,1024
+size: 967,983
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3582,7 +3582,7 @@ Fletch/Fletch_sword_2_swing
   index: -1
 
 skeleton24.png
-size: 1024,1024
+size: 1024,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3714,7 +3714,7 @@ TurboTed/TurboTed_sword_3_bigSwing
   index: -1
 
 skeleton25.png
-size: 1024,1024
+size: 991,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -3846,7 +3846,7 @@ PamelaFrost-02/PamelaFrost-02_leg_lower_near_1
   index: -1
 
 skeleton26.png
-size: 1024,1024
+size: 985,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4069,7 +4069,7 @@ StumpyPete/StumpyPete_pistol_shoot
   index: -1
 
 skeleton27.png
-size: 1024,1024
+size: 981,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4250,7 +4250,7 @@ TurboTed-Blue/TurboTed-Blue_head_1
   index: -1
 
 skeleton28.png
-size: 1024,1024
+size: 991,1008
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4291,7 +4291,7 @@ PamelaFrost-02/PamelaFrost-02_leg_lower_near_2
   index: -1
 
 skeleton29.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4346,7 +4346,7 @@ PamelaFrost-03/PamelaFrost-03_leg_lower_near_2
   index: -1
 
 skeleton30.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4394,7 +4394,7 @@ StumpyPete/StumpyPete_gun
   index: -1
 
 skeleton31.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4442,7 +4442,7 @@ StumpyPete/StumpyPete_gun_shoot
   index: -1
 
 skeleton32.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4560,7 +4560,7 @@ PamelaFrost-04/PamelaFrost-04_leg_lower_near_1
   index: -1
 
 skeleton33.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4685,7 +4685,7 @@ PamelaFrost-05/PamelaFrost-05_leg_lower_near_2
   index: -1
 
 skeleton34.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4747,7 +4747,7 @@ PamelaFrost-05/PamelaFrost-05_leg_lower_near_1
   index: -1
 
 skeleton35.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4809,7 +4809,7 @@ PamelaFrost/PamelaFrost_leg_lower_far
   index: -1
 
 skeleton36.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4850,7 +4850,7 @@ PamelaFrost/PamelaFrost_leg_lower_near_1
   index: -1
 
 skeleton37.png
-size: 1024,1024
+size: 1001,996
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4891,7 +4891,7 @@ PamelaFrost/PamelaFrost_leg_lower_near_2
   index: -1
 
 skeleton38.png
-size: 1024,1024
+size: 1001,1022
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -4946,7 +4946,7 @@ StumpyPete/StumpyPete_torso
   index: -1
 
 skeleton39.png
-size: 1024,1024
+size: 1001,1022
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5001,7 +5001,7 @@ TruckMatthews/TruckMatthews_torso
   index: -1
 
 skeleton40.png
-size: 1024,1024
+size: 1024,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5084,7 +5084,7 @@ YoungBuck/YoungBuck_torso
   index: -1
 
 skeleton41.png
-size: 1024,1024
+size: 1023,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5216,7 +5216,7 @@ TurboTed-Blue/TurboTed-Blue_head_4_wideEyes
   index: -1
 
 skeleton42.png
-size: 1024,1024
+size: 1023,1022
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5320,7 +5320,7 @@ TurboTed-Blue/TurboTed-Blue_head_5_sad
   index: -1
 
 skeleton43.png
-size: 1024,1024
+size: 1023,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5417,7 +5417,7 @@ TurboTed-Green/TurboTed-Green_head_1
   index: -1
 
 skeleton44.png
-size: 1024,1024
+size: 1022,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5514,7 +5514,7 @@ YoungBuck/YoungBuck_arm_upper_near
   index: -1
 
 skeleton45.png
-size: 1024,1024
+size: 1023,1022
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5653,7 +5653,7 @@ TurboTed-Blue/TurboTed-Blue_head_2_injured
   index: -1
 
 skeleton46.png
-size: 1024,1024
+size: 1023,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -5792,7 +5792,7 @@ TurboTed-Blue/TurboTed-Blue_head_3_happy
   index: -1
 
 skeleton47.png
-size: 1024,1024
+size: 1023,1023
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6375,7 +6375,7 @@ YoungBuck/YoungBuck_arm_lower_near
   index: -1
 
 skeleton52.png
-size: 1024,1024
+size: 1021,1021
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6465,7 +6465,7 @@ YoungBuck/YoungBuck_leg_lower_far
   index: -1
 
 skeleton53.png
-size: 1024,1024
+size: 1024,1021
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6611,7 +6611,7 @@ YoungBuck/YoungBuck_leg_lower_near_1
   index: -1
 
 skeleton54.png
-size: 1024,1024
+size: 1022,1003
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6820,7 +6820,7 @@ Template/Template_leg_upper_near
   index: -1
 
 skeleton55.png
-size: 1024,1024
+size: 976,1005
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6917,7 +6917,7 @@ YoungBuck/YoungBuck_leg_lower_near_2
   index: -1
 
 skeleton56.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6930,7 +6930,7 @@ GabrielCaine/GabrielCaine_head_3_happy
   index: -1
 
 skeleton57.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6943,7 +6943,7 @@ GabrielCaine/GabrielCaine_head_4_wideEyes
   index: -1
 
 skeleton58.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6956,7 +6956,7 @@ GabrielCaine/GabrielCaine_head_5_sad
   index: -1
 
 skeleton59.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6969,7 +6969,7 @@ PamelaFrost-02/PamelaFrost-02_head_1
   index: -1
 
 skeleton60.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6982,7 +6982,7 @@ PamelaFrost-02/PamelaFrost-02_head_2_injured
   index: -1
 
 skeleton61.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -6995,7 +6995,7 @@ PamelaFrost-02/PamelaFrost-02_head_3_happy
   index: -1
 
 skeleton62.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7008,7 +7008,7 @@ PamelaFrost-02/PamelaFrost-02_head_4_wideEyes
   index: -1
 
 skeleton63.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7021,7 +7021,7 @@ PamelaFrost-02/PamelaFrost-02_head_5_sad
   index: -1
 
 skeleton64.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7034,7 +7034,7 @@ PamelaFrost-03/PamelaFrost-03_head_1
   index: -1
 
 skeleton65.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7047,7 +7047,7 @@ PamelaFrost-03/PamelaFrost-03_head_2_injured
   index: -1
 
 skeleton66.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7060,7 +7060,7 @@ PamelaFrost-03/PamelaFrost-03_head_3_happy
   index: -1
 
 skeleton67.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7073,7 +7073,7 @@ PamelaFrost-03/PamelaFrost-03_head_4_wideEyes
   index: -1
 
 skeleton68.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7086,7 +7086,7 @@ PamelaFrost-03/PamelaFrost-03_head_5_sad
   index: -1
 
 skeleton69.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7099,7 +7099,7 @@ PamelaFrost-04/PamelaFrost-04_head_1
   index: -1
 
 skeleton70.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7112,7 +7112,7 @@ PamelaFrost-04/PamelaFrost-04_head_2_injured
   index: -1
 
 skeleton71.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7125,7 +7125,7 @@ PamelaFrost-04/PamelaFrost-04_head_3_happy
   index: -1
 
 skeleton72.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7138,7 +7138,7 @@ PamelaFrost-04/PamelaFrost-04_head_4_wideEyes
   index: -1
 
 skeleton73.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7151,7 +7151,7 @@ PamelaFrost-04/PamelaFrost-04_head_5_sad
   index: -1
 
 skeleton74.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7164,7 +7164,7 @@ PamelaFrost-05/PamelaFrost-05_head_1
   index: -1
 
 skeleton75.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7177,7 +7177,7 @@ PamelaFrost-05/PamelaFrost-05_head_2_injured
   index: -1
 
 skeleton76.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7190,7 +7190,7 @@ PamelaFrost-05/PamelaFrost-05_head_3_happy
   index: -1
 
 skeleton77.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7203,7 +7203,7 @@ PamelaFrost-05/PamelaFrost-05_head_4_wideEyes
   index: -1
 
 skeleton78.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7216,7 +7216,7 @@ PamelaFrost-05/PamelaFrost-05_head_5_sad
   index: -1
 
 skeleton79.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7229,7 +7229,7 @@ PamelaFrost/PamelaFrost_head_1
   index: -1
 
 skeleton80.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7242,7 +7242,7 @@ PamelaFrost/PamelaFrost_head_2_injured
   index: -1
 
 skeleton81.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7255,7 +7255,7 @@ PamelaFrost/PamelaFrost_head_3_happy
   index: -1
 
 skeleton82.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7268,7 +7268,7 @@ PamelaFrost/PamelaFrost_head_4_wideEyes
   index: -1
 
 skeleton83.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7281,7 +7281,7 @@ PamelaFrost/PamelaFrost_head_5_sad
   index: -1
 
 skeleton84.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7294,7 +7294,7 @@ StumpyPete/StumpyPete_head_1
   index: -1
 
 skeleton85.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7307,7 +7307,7 @@ StumpyPete/StumpyPete_head_2_injured
   index: -1
 
 skeleton86.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7320,7 +7320,7 @@ StumpyPete/StumpyPete_head_3_happy
   index: -1
 
 skeleton87.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7333,7 +7333,7 @@ StumpyPete/StumpyPete_head_4_wideEyes
   index: -1
 
 skeleton88.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7346,7 +7346,7 @@ StumpyPete/StumpyPete_head_5_sad
   index: -1
 
 skeleton89.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7359,7 +7359,7 @@ Template/Template_head_1
   index: -1
 
 skeleton90.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7372,7 +7372,7 @@ Template/Template_head_2_injured
   index: -1
 
 skeleton91.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7385,7 +7385,7 @@ Template/Template_head_3_happy
   index: -1
 
 skeleton92.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7398,7 +7398,7 @@ Template/Template_head_4_wideEyes
   index: -1
 
 skeleton93.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7411,7 +7411,7 @@ Template/Template_head_5_sad
   index: -1
 
 skeleton94.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7424,7 +7424,7 @@ TruckMatthews/TruckMatthews_head_1
   index: -1
 
 skeleton95.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7437,7 +7437,7 @@ TruckMatthews/TruckMatthews_head_2_injured
   index: -1
 
 skeleton96.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7450,7 +7450,7 @@ TruckMatthews/TruckMatthews_head_3_happy
   index: -1
 
 skeleton97.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7463,7 +7463,7 @@ TruckMatthews/TruckMatthews_head_4_wideEyes
   index: -1
 
 skeleton98.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7476,7 +7476,7 @@ TruckMatthews/TruckMatthews_head_5_sad
   index: -1
 
 skeleton99.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7489,7 +7489,7 @@ YoungBuck/YoungBuck_head_1
   index: -1
 
 skeleton100.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7502,7 +7502,7 @@ YoungBuck/YoungBuck_head_2_injured
   index: -1
 
 skeleton101.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7515,7 +7515,7 @@ YoungBuck/YoungBuck_head_3_happy
   index: -1
 
 skeleton102.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7528,7 +7528,7 @@ YoungBuck/YoungBuck_head_4_wideEyes
   index: -1
 
 skeleton103.png
-size: 1024,1024
+size: 547,547
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7541,7 +7541,7 @@ YoungBuck/YoungBuck_head_5_sad
   index: -1
 
 skeleton104.png
-size: 1024,1024
+size: 545,545
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7554,7 +7554,7 @@ Fletch/Fletch_head_2_injured
   index: -1
 
 skeleton105.png
-size: 1024,1024
+size: 543,543
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7595,7 +7595,7 @@ Commander-Darkstrike/Commander-Darkstrike_head_5_sad
   index: -1
 
 skeleton106.png
-size: 1024,1024
+size: 543,543
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7636,7 +7636,7 @@ Commander-Firestrike/Commander-Firestrike_head_5_sad
   index: -1
 
 skeleton107.png
-size: 1024,1024
+size: 543,543
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7677,7 +7677,7 @@ Commander-Icestrike/Commander-Icestrike_head_5_sad
   index: -1
 
 skeleton108.png
-size: 1024,1024
+size: 543,543
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7718,7 +7718,7 @@ Commander-Stonestrike/Commander-Stonestrike_head_5_sad
   index: -1
 
 skeleton109.png
-size: 1024,1024
+size: 543,543
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7731,7 +7731,7 @@ Fletch/Fletch_head_1
   index: -1
 
 skeleton110.png
-size: 1024,1024
+size: 542,542
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7744,7 +7744,7 @@ Fletch/Fletch_head_3_happy
   index: -1
 
 skeleton111.png
-size: 1024,1024
+size: 541,542
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
@@ -7757,7 +7757,7 @@ Fletch/Fletch_head_4_wideEyes
   index: -1
 
 skeleton112.png
-size: 1024,1024
+size: 541,542
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
