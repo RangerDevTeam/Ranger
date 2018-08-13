@@ -9,7 +9,7 @@ public class UnitData : MonoBehaviour {
 
     public StateMachine PlayerStateMachine = new StateMachine();
     public SkeletonAnimation skeletonAnimation;
-
+    public AttributeData mAttData;
 
     public enum UnitStateType : uint
     {
@@ -27,7 +27,7 @@ public class UnitData : MonoBehaviour {
     {
 
         skeletonAnimation = FindObj.FindChild(this.gameObject,"Animation").GetComponent<SkeletonAnimation>();
-		
+        mAttData = new AttributeData(this);
 	}
 	
 	// Update is called once per frame
