@@ -8,6 +8,7 @@ public static class Keyboard{
     public static KeyCode moveLeft = KeyCode.A;
     public static KeyCode moveRight = KeyCode.D;
     public static KeyCode moveDown = KeyCode.S;
+    public static KeyCode attack = KeyCode.J;
     public static List<KeyCode> skillKeyCode = new List<KeyCode>();
 
 

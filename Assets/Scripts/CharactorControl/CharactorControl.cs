@@ -10,6 +10,7 @@ public class CharactorControl : UnitData {
     {
         PlayerStateMachine.RegisterState(new MoveState(this));
         PlayerStateMachine.RegisterState(new IdleState(this));
+        PlayerStateMachine.RegisterState(new AttackState(this));
 
         tryChangeCharactorState = new TryChangePlayerState(this);
     }
@@ -43,12 +44,15 @@ public class CharactorControl : UnitData {
             //Debug.Log("改变为移动状态");
             PlayerStateMachine.SwitchState((uint)UnitStateType.move, null, null);
         }
+        else if (tryChangeCharactorState.TryAttackPlayer())
+        {
+            PlayerStateMachine.SwitchState((uint)UnitStateType.attack, null, null);
+        }
         else if(tryChangeCharactorState.TryIdlePlayer())
         {
             //Debug.Log("改变为待机状态");
             PlayerStateMachine.SwitchState((uint)UnitStateType.idle, null, null);
         }
-		
     }
 
 }
