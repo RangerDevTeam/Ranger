@@ -38,15 +38,16 @@ public class CharactorControl : UnitData {
     //通过输入的按键控制玩家
     void ControlPlayer()
     {
+        if (tryChangeCharactorState.TryAttackPlayer())
+        {
+            PlayerStateMachine.SwitchState((uint)UnitStateType.attack, null, null);
+            return;
+        }
 
         if (tryChangeCharactorState.TryMovePlayer())
         {
             //Debug.Log("改变为移动状态");
             PlayerStateMachine.SwitchState((uint)UnitStateType.move, null, null);
-        }
-        else if (tryChangeCharactorState.TryAttackPlayer())
-        {
-            PlayerStateMachine.SwitchState((uint)UnitStateType.attack, null, null);
         }
         else if(tryChangeCharactorState.TryIdlePlayer())
         {

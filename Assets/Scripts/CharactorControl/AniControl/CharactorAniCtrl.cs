@@ -8,7 +8,7 @@ public class CharactorAniCtrl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-
+        AddEvent();
     }
 	
 	// Update is called once per frame
@@ -62,6 +62,19 @@ public class CharactorAniCtrl : MonoBehaviour {
             {
                 skeletonAnimation.state.SetAnimation(0, "idle", true);
             }
+        }
+    }
+
+    void AddEvent()
+    {
+        gameObject.GetComponent<SkeletonAnimation>().state.Event += TestEvent;
+    }
+
+    void TestEvent(Spine.TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.data.name == "atk01")
+        {
+            Debug.Log("111");
         }
     }
 }
