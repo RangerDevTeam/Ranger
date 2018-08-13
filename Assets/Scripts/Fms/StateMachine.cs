@@ -91,12 +91,12 @@
           }
           //切换到没有注册过的状态 false
           IState newState = null;
-         // Debug.Log("新状态ID " + newStateID);
+         //Debug.Log("新状态ID " + newStateID);
           mDictionaryState.TryGetValue(newStateID, out newState);
-         // Debug.Log("新状态 " + newState);
+         //Debug.Log("新状态 " + newState);
           if (newState == null)
          {
-              return false;
+            return false;
           }
          // Debug.Log("新状态" + newState);
           // 退出当前状态
