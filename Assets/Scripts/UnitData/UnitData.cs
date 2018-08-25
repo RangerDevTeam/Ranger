@@ -8,7 +8,7 @@ public class UnitData : MonoBehaviour {
 
 
     public StateMachine PlayerStateMachine = new StateMachine();
-    public SkeletonAnimation skeletonAnimation;
+    public AnimationData animationData;
     public AttributeData mAttData;
 
     public enum UnitStateType : uint
@@ -22,13 +22,20 @@ public class UnitData : MonoBehaviour {
         eat = 6
     }
 
+
+    public List<SkillData> mySkillDatas = new List<SkillData>();
+
+
+
 	// Use this for initialization
     protected virtual void Start()
     {
-
-        skeletonAnimation = FindObj.FindChild(this.gameObject,"Animation").GetComponent<SkeletonAnimation>();
+        animationData = new AnimationData(FindObj.FindChild(this.gameObject, "Animation").GetComponent<SkeletonAnimation>());
         mAttData = new AttributeData(this);
-	}
+
+        CreateSKillData();
+
+    }
 	
 	// Update is called once per frame
     protected virtual void Update()
@@ -37,4 +44,17 @@ public class UnitData : MonoBehaviour {
         PlayerStateMachine.OnUpdate();
 		
 	}
+
+
+    public void CreateSKillData()
+    {
+        SkillData normal = new SkillData(this,1,1);
+        mySkillDatas.Add(normal);
+        normal.animationName = "meleeSwing1";
+        SkillData firstSkill = new SkillData(this,100,1);
+        mySkillDatas.Add(firstSkill);
+        firstSkill.animationName = "meleeSwing2";
+    }
+
+
 }

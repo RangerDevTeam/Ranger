@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : IState {
+public class HurtState : IState {
 
+    private UnitData unitData;
 
-	    private UnitData unitData;
-
-    public AttackState(UnitData u)
+    public HurtState(UnitData u)
     {
         this.unitData = u;
     }
 
     public uint GetStateID()
     {
-        return (uint)UnitData.UnitStateType.attack;
+        return (uint)UnitData.UnitStateType.hurt;
     }
 
     //void OnEnter();
@@ -22,8 +21,8 @@ public class AttackState : IState {
     //等待补全
     public void OnEnter(StateMachine machine, IState preState, object param1, object param2)
     {
-        // AnimationPlay.Play(unitData,"meleeSwing1");
-        unitData.mySkillDatas[0].UseActiveSkill();
+        //Debug.Log("进入了受击动画");
+        //AnimationPlay.Play(unitData,"idle");
     }
     public void OnLeave(IState nextState, object param1, object param2)
     { 

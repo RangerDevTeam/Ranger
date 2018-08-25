@@ -28,8 +28,9 @@ public static class AnimationPlay {
 
     public static void Play(UnitData unitData, string animationName, bool loop,uint animationNumber)
     {
-        unitData.skeletonAnimation.state.SetAnimation((int)animationNumber, animationName, loop);
-
+      //  Debug.Log(animationName);
+        unitData.animationData.skeletonAnimation.state.SetAnimation((int)animationNumber, animationName, loop);
     }
+
 
 }

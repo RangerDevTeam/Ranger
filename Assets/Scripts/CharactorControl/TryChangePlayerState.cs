@@ -10,39 +10,22 @@ public class TryChangePlayerState {
         this.controler = controler;
     }
 
-    public bool TryMovePlayer()
+    public void TryMovePlayer(UnitData unitdata)
     {
         //Debug.Log(controler.PlayerStateMachine.GetState((uint)controler.PlayerStateMachine.CurrentStateID));
-        if (controler.PlayerStateMachine.CurrentStateID == (uint)UnitData.UnitStateType.move) return false;//当前已经是移动状态则不转换为移动状态
-        if (InputAttackKey()) return false;
-        return InputMoveKey();
+        if (unitdata.PlayerStateMachine.CurrentStateID != (uint)UnitData.UnitStateType.idle) return;//当前已经是移动状态则不转换为移动状态
+        unitdata.PlayerStateMachine.SwitchState((uint)UnitData.UnitStateType.move, null, null);
     }
 
-    bool InputMoveKey()
+    public void TryAttackPlayer()
     {
-        if (Input.GetKey(Keyboard.moveUp)) return true;
-        if (Input.GetKey(Keyboard.moveDown)) return true;
-        if (Input.GetKey(Keyboard.moveLeft)) return true;
-        if (Input.GetKey(Keyboard.moveRight)) return true;
-        return false;
+       // if (controler.PlayerStateMachine.CurrentStateID == (uint)UnitData.UnitStateType.attack);//当前已经是attack状态则不转换为attack状态
+        
     }
 
-    bool InputAttackKey()
+    public void TryIdlePlayer(UnitData unitdata)
     {
-        if (Input.GetKey(Keyboard.attack)) return true;
-        return false;
-    }
-
-    public bool TryAttackPlayer()
-    {
-        if (controler.PlayerStateMachine.CurrentStateID == (uint)UnitData.UnitStateType.attack) return false;//当前已经是attack状态则不转换为attack状态
-        return InputAttackKey();
-    }
-
-    public bool TryIdlePlayer()
-    {
-        if (controler.PlayerStateMachine.CurrentStateID == (uint)UnitData.UnitStateType.idle) return false;//当前已经是idle状态则不转换为idle状态
-        if (InputAttackKey()) return false; //当按下攻击键时不转换为idle状态
-        return !InputMoveKey();
+        if (unitdata.PlayerStateMachine.CurrentStateID != (uint)UnitData.UnitStateType.move) return;//当前已经是idle状态则不转换为idle状态
+        unitdata.PlayerStateMachine.SwitchState((uint)UnitData.UnitStateType.idle, null, null);
     }
 }

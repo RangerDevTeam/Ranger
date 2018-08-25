@@ -38,22 +38,25 @@ public class CharactorControl : UnitData {
     //通过输入的按键控制玩家
     void ControlPlayer()
     {
-        if (tryChangeCharactorState.TryAttackPlayer())
-        {
-            PlayerStateMachine.SwitchState((uint)UnitStateType.attack, null, null);
-            return;
-        }
+        if (Input.GetKey(Keyboard.attack)) mySkillDatas[0].UseActiveSkill();
+        if (InputMoveKey() == false) tryChangeCharactorState.TryIdlePlayer(this);
+        if (InputMoveKey() == true) tryChangeCharactorState.TryMovePlayer(this);
 
-        if (tryChangeCharactorState.TryMovePlayer())
-        {
-            //Debug.Log("改变为移动状态");
-            PlayerStateMachine.SwitchState((uint)UnitStateType.move, null, null);
-        }
-        else if(tryChangeCharactorState.TryIdlePlayer())
-        {
-            //Debug.Log("改变为待机状态");
-            PlayerStateMachine.SwitchState((uint)UnitStateType.idle, null, null);
-        }
+
     }
 
+
+    bool InputMoveKey()
+    {
+        if (Input.GetKey(Keyboard.moveUp)) return true;
+        if (Input.GetKey(Keyboard.moveDown)) return true;
+        if (Input.GetKey(Keyboard.moveLeft)) return true;
+        if (Input.GetKey(Keyboard.moveRight)) return true;
+        return false;
+    }
+
+
+
+
 }
+

@@ -43,13 +43,13 @@ public class MoveState : IState {
         if (Input.GetKey(Keyboard.moveLeft))
         {
             unitData.transform.Translate(Vector3.left * 2f * Time.deltaTime);
-            unitData.skeletonAnimation.skeleton.flipX = true;
+            unitData.animationData.skeletonAnimation.skeleton.flipX = true;
         }
         //向右走
         if (Input.GetKey(Keyboard.moveRight))
         {
             unitData.transform.Translate(Vector3.right * 2f * Time.deltaTime);
-            unitData.skeletonAnimation.skeleton.flipX = false;
+            unitData.animationData.skeletonAnimation.skeleton.flipX = false;
         }
 
     }
