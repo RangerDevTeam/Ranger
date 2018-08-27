@@ -5,7 +5,6 @@ using UnityEngine;
 public class CharactorControl : UnitData {
 
     protected TryChangePlayerState tryChangeCharactorState;
-
     void Awake()
     {
         PlayerStateMachine.RegisterState(new MoveState(this));

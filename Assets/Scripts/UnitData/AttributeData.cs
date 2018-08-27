@@ -36,10 +36,18 @@ public class AttributeData
             CreateDic(equipAttData, (uint)att.GetHashCode(), att.ToString());
             CreateDic(buffAttData, (uint)att.GetHashCode(), att.ToString());
             CreateDic(baseAttData, (uint)att.GetHashCode(), att.ToString());
+            CreateDic(baseAndEquipAttData, (uint)att.GetHashCode(), att.ToString());
         }
 
         //加载基础属性（未实现，需读取文件）
 
+
+        TestClass t = new TestClass();
+        t._name = "新属性";
+        JsonFileDeal<TestClass>.WriteJsonFile(t, "TestClass");
+
+        TestClass test =  JsonFileDeal<TestClass>.ReadJsonFile("TestClass");
+       Debug.Log(test._name);
 
 
         //foreach (string key in baseAttData.Keys)
@@ -124,7 +132,7 @@ public class AttributeData
 public class AttributeSingleData
 {
     //初始化的时候生成，不允许修改
-    public readonly uint attID = 999;
+    public readonly  uint attID = 999;
     private int attributeValue;
     public int attValue
     {
@@ -145,4 +153,11 @@ public class AttributeSingleData
     }
 
 
+}
+
+public class TestClass
+{
+    public int id = 1;
+    public string _name = "没有";
+    public bool isTrue = false;
 }

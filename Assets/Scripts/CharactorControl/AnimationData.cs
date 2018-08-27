@@ -7,7 +7,7 @@ using Spine.Unity;
 public class AnimationData {
 
     public SkeletonAnimation skeletonAnimation;
-
+    
     public delegate void GetAnimationEventHandler(SkeletonAnimation skeletonAnimation, string eventName);
     public event GetAnimationEventHandler GetAnimationEvent;
 
