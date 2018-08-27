@@ -7,8 +7,8 @@ public class CharactorControl : UnitData {
     protected TryChangePlayerState tryChangeCharactorState;
     void Awake()
     {
-        PlayerStateMachine.RegisterState(new MoveState(this));
-        PlayerStateMachine.RegisterState(new IdleState(this));
+        PlayerStateMachine.RegisterState(new PlayerMoveState(this));
+        PlayerStateMachine.RegisterState(new PlayerIdleState(this));
         PlayerStateMachine.RegisterState(new AttackState(this));
 
         tryChangeCharactorState = new TryChangePlayerState(this);
@@ -28,34 +28,8 @@ public class CharactorControl : UnitData {
 
 
         base.Update();
-       ControlPlayer();
 
 	}
-
-
-    //要考虑下是否有更好的写法
-    //通过输入的按键控制玩家
-    void ControlPlayer()
-    {
-        if (Input.GetKey(Keyboard.attack)) mySkillDatas[0].UseActiveSkill();
-        if (InputMoveKey() == false) tryChangeCharactorState.TryIdlePlayer(this);
-        if (InputMoveKey() == true) tryChangeCharactorState.TryMovePlayer(this);
-
-
-    }
-
-
-    bool InputMoveKey()
-    {
-        if (Input.GetKey(Keyboard.moveUp)) return true;
-        if (Input.GetKey(Keyboard.moveDown)) return true;
-        if (Input.GetKey(Keyboard.moveLeft)) return true;
-        if (Input.GetKey(Keyboard.moveRight)) return true;
-        return false;
-    }
-
-
-
 
 }
 

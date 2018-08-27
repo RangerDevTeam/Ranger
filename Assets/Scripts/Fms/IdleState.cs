@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleState : IState {
 
-	    private UnitData unitData;
+	    protected UnitData unitData;
 
     public IdleState(UnitData u)
     {
@@ -28,7 +28,7 @@ public class IdleState : IState {
     { 
     }
     //Unity 生命周期
-    public void OnUpdate()
+    public virtual void OnUpdate()
     { 
 
     }
