@@ -22,28 +22,24 @@ public class AttributeData
             Debug.LogError("没读取到AttributeKey文件");
             return;
         }
-        foreach (Attribute att in Enum.GetValues(typeof(Attribute)))
-        {
-            for (int i = 0; i < attkeys.singleKeys.Count; i++)
-            {
-                CreateDic(unitAttData, attkeys.singleKeys[i]);
-                CreateDic(equipAttData, attkeys.singleKeys[i]);
-                CreateDic(buffAttData, attkeys.singleKeys[i]);
-                CreateDic(baseAttData, attkeys.singleKeys[i]);
-                CreateDic(baseAndEquipAttData, attkeys.singleKeys[i]);
-            
-            }
-
-        }
-
-        //加载基础属性（未实现，需读取文件）
-
-     
-        Debug.Log(attkeys.singleKeys.Count);
         for (int i = 0; i < attkeys.singleKeys.Count; i++)
         {
-            Debug.Log(attkeys.singleKeys[i].attName);
+            CreateDic(unitAttData, attkeys.singleKeys[i]);
+            CreateDic(equipAttData, attkeys.singleKeys[i]);
+            CreateDic(buffAttData, attkeys.singleKeys[i]);
+            CreateDic(baseAttData, attkeys.singleKeys[i]);
+            CreateDic(baseAndEquipAttData, attkeys.singleKeys[i]);
+
         }
+        //加载基础属性（未实现，需读取文件）
+
+
+        //Debug.Log(baseAttData.Count);
+        //foreach(var item in baseAttData)
+        //{
+        //    Debug.Log(item.Value.attName + "   " + item.Value.maxValue);
+        //}
+     
 
     }
 
