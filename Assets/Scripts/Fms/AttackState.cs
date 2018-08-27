@@ -23,7 +23,7 @@ public class AttackState : IState {
     public void OnEnter(StateMachine machine, IState preState, object param1, object param2)
     {
         // AnimationPlay.Play(unitData,"meleeSwing1");
-        unitData.mySkillDatas[0].UseActiveSkill();
+     //   unitData.mySkillDatas[0].UseActiveSkill();
     }
     public void OnLeave(IState nextState, object param1, object param2)
     { 

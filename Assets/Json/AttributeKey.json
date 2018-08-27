@@ -1,0 +1,14 @@
+{
+	"singleKeys":
+	[
+		{"attID":0,"attName":"attack","minValue":0,"maxValue":9999},
+		{"attID":1,"attName":"defence","minValue":0,"maxValue":100},
+		{"attID":3,"attName":"defencePercent","minValue":0,"maxValue":100},
+		{"attID":4,"attName":"max_health","minValue":0,"maxValue":9999},
+		{"attID":5,"attName":"spirit","minValue":0,"maxValue":250},
+		{"attID":6,"attName":"temperature","minValue":-255,"maxValue":255},
+		{"attID":7,"attName":"hunger","minValue":0,"maxValue":250},
+		{"attID":8,"attName":"thirsty","minValue":0,"maxValue":250}
+	]
+
+}
