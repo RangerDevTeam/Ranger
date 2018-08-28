@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,8 +29,25 @@ public class CharactorControl : UnitData {
 
 
         base.Update();
+        getKeyDownCode();
+    }
 
-	}
-
+    //按键检测
+    public static KeyCode getKeyDownCode()
+    {
+        if (Input.anyKeyDown)
+        {
+            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(keyCode))
+                {
+                    uint skillID = Keyboard.Instance.GetSkillId(keyCode.ToString());
+                    Debug.Log(skillID);
+                    return keyCode;
+                }
+            }
+        }
+        return KeyCode.None;
+    }
 }
 
