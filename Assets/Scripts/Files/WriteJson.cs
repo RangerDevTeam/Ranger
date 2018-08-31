@@ -30,11 +30,11 @@ public static class JsonFileDeal<T>{
             Debug.LogWarning("[ 文件不存在! 取消读取操作! ]  文件读取路径 : " + path);
             return default(T);
         }
-        Debug.Log(filePath);
+        //Debug.Log(filePath);
         JsonReader reader = new JsonReader(File.ReadAllText(filePath));
-        Debug.LogError(reader);
+       // Debug.LogError(reader);
         T obj = JsonMapper.ToObject<T>(reader);
-        Debug.LogError("obj is    " + obj);
+       // Debug.LogError("obj is    " + obj);
         return obj;
     }
 

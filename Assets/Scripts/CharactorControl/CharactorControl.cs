@@ -33,21 +33,15 @@ public class CharactorControl : UnitData {
     }
 
     //按键检测
-    public static KeyCode getKeyDownCode()
+    public static void getKeyDownCode()
     {
         if (Input.anyKeyDown)
         {
-            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-            {
-                if (Input.GetKeyDown(keyCode))
-                {
-                    uint skillID = Keyboard.Instance.GetSkillId(keyCode.ToString());
-                    Debug.Log(skillID);
-                    return keyCode;
-                }
-            }
+            
+            Debug.Log("11       "+(KeyCode)Enum.Parse(typeof(KeyCode),"leftControl"));
+            Debug.LogError(Event.KeyboardEvent(Input.inputString));
+            uint skillID = Keyboard.Instance.GetSkillId(Event.KeyboardEvent(Input.inputString).keyCode.ToString());
         }
-        return KeyCode.None;
     }
 }
 
