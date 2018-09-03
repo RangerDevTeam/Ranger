@@ -25,7 +25,26 @@ namespace Liangddyy.Util
         private static readonly string dbName = "/rangerTest.db";
         private static DbUtil dbUtil;
 
-        private SqliteConnection dbConnection;
+        private SqliteConnection connection;
+        private SqliteConnection dbConnection
+        {
+            get {
+
+                if (connection == null)
+                {
+                    connection = new SqliteConnection(path + dbName);
+                    connection.Open();
+                }
+                    
+
+                return connection;
+            }
+
+            set {
+
+                connection = value;
+            }
+        }
         private SqliteCommand dbCmd;
         private SqliteTransaction dbTransaction;
         private SqliteDataReader dbReader;
@@ -52,6 +71,7 @@ namespace Liangddyy.Util
 
         public SqliteDataReader ExecuteQuery(string queryString)
         {
+            //Debug.Log(" db   conn  " +dbConnection);
             dbCmd = dbConnection.CreateCommand();
             dbCmd.CommandText = queryString;
 
@@ -59,6 +79,16 @@ namespace Liangddyy.Util
 
             return dbReader;
         }
+
+        public SqliteDataReader ReadFullTable<T>()
+        {
+            string tableName = typeof(T).Name;
+            string queryString = "SELECT * FROM " + tableName;
+            //Debug.Log(queryString);
+            return ExecuteQuery(queryString);
+        }
+
+
 
         public int ExecuteSql(string sqlStr)
         {
@@ -120,6 +150,7 @@ namespace Liangddyy.Util
 
         public void Update<T>(T arg)
         {
+            //Debug.LogError("dbConnection    " + dbConnection);
             dbCmd = dbConnection.CreateCommand();
             this.ExecuteSql(GetCmdUpdate(arg, dbCmd));
         }
@@ -178,7 +209,7 @@ namespace Liangddyy.Util
                 cmd.CommandText += "," + normal[i].columnName + " = @" + normal[i].columnName;
 
             key = GetPrimaryColumn(Columns);
-            Debug.Log(key);
+            Debug.Log(key.ColumnValue);
             cmd.CommandText += " WHERE " + key.columnName + " = @" + key.columnName + ";";
 
             for (var i = 0; i < RowLength; i++)
@@ -269,14 +300,20 @@ namespace Liangddyy.Util
                 return null;
             }
 
-            Debug.Log("NowCreate:" + TableName);
+           // Debug.Log("NowCreate:" + TableName);
 
             string queryCreate = "CREATE TABLE IF NOT EXISTS " + TableName + "(" + columns[0].columnName + " " +
                                  columns[0].TableType;
 
+           // Debug.Log("语句为：   "  + queryCreate);
+
             for (var i = 1; i < columns.Length; i++)
+            {
                 queryCreate += ", " + columns[i].columnName + " " + columns[i].TableType;
-            queryCreate += ");";
+                queryCreate += ");";
+               // Debug.Log("循环语句为：   " + queryCreate);
+            }
+
 
             return queryCreate;
         }

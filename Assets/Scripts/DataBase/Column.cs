@@ -51,7 +51,11 @@ namespace Liangddyy.Util
             get
             {
                 if (IsPrimaryKey)
-                    return "INTEGER PRIMARY KEY";
+                {
+                    if(columnType == typeof(string)) return "TEXT PRIMARY KEY NOT NULL";
+                    else return "INTEGER PRIMARY KEY";
+                }
+                    
                 return To_TableType(columnType);
             }
         }
@@ -67,7 +71,7 @@ namespace Liangddyy.Util
                 for (int i = 0; i < nameObjs.Length; i++)
                 {
                     IsDataBaseKeyAttribute nameAtt = (IsDataBaseKeyAttribute)nameObjs[i];
-                    Debug.LogError("这是一个key    " + columnName);
+                    //Debug.LogError("这是一个key    " + columnName + "   type:   " + columnType +  "  value:  " + ColumnValue);
                     return true;
                 }
 
@@ -90,6 +94,13 @@ namespace Liangddyy.Util
                     return ((MyProperty<string>)property).GetValue();
                 if (columnType == typeof(int))
                     return ((MyProperty<int>)property).GetValue();
+                if (columnType == typeof(Guid))
+                {
+                    Debug.LogError("值为  :" + ((MyProperty<Guid>)property).GetValue());
+                    return ((MyProperty<Guid>)property).GetValue();
+                }
+                   
+        
                 return null;
             }
         }
@@ -101,6 +112,12 @@ namespace Liangddyy.Util
             if (type == typeof(int)) return ColType.INTEGER.ToString();
 
             if (type == typeof(string)) return ColType.TEXT.ToString();
+
+            if (type == typeof(Guid))
+            {
+                Debug.Log("这是一个GUID数据  " + type);
+                return ColType.BLOB.ToString();
+            } 
 
             throw new Exception("Wrong Type");
         }

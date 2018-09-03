@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Liangddyy.Util;
+using Mono.Data.Sqlite;
 
 public class TestDb : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    TestCharactor c1;
+    DbUtil dbUtil;
+    // Use this for initialization
+    void Start () {
 
-        DbUtil dbUtil = DbUtil.getInstance();
+        dbUtil = DbUtil.getInstance();
         dbUtil.CreateTable(new TestSkill());//建表
         dbUtil.CreateTable(new TestCharactor());
 
         dbUtil.Insert(new TestSkill() { skillID = 1, skillName = "技能1"});//插入
-        dbUtil.Insert(new TestCharactor() { charactorName = "charactor"});
+
+        c1 = new TestCharactor();
+        c1.charactorName = "c1";
+        dbUtil.Insert(c1);
 
         List<TestSkill> penList = new List<TestSkill>();
         List<TestCharactor> personList = new List<TestCharactor>();
@@ -26,13 +32,32 @@ public class TestDb : MonoBehaviour {
         }
         dbUtil.InsertList(penList);//插入链表
         dbUtil.InsertList(personList);
-        dbUtil.Update(new TestCharactor() {charactorName = "hh"});
+       
 
-        dbUtil.CloseConnection();
+        
+
+       // dbUtil.CloseConnection();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            c1.charactorName = "change";
+            dbUtil.Update(c1);
+            dbUtil.CloseConnection();
+
+
+            SqliteDataReader reader = dbUtil.ReadFullTable<TestCharactor>();
+            while (reader.Read())
+            {
+                Debug.Log(reader.GetString(reader.GetOrdinal("charactorID")));
+                Debug.Log(reader.GetString(reader.GetOrdinal("charactorName")));
+            }
+
+        }
 		
 	}
 }
