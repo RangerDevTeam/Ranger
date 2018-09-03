@@ -21,7 +21,6 @@ public class Keyboard {
         //根据数组排序来确定绑定的技能ID
         for (int i = 0; i < skillKeyCode.Count; i++)
         {
-          //  Debug.LogError(skillKeyCode[i].ToString());
             CreateDic(skillKeyCode[i].ToString(), (uint)(i + 1));
         }
     }
@@ -55,7 +54,7 @@ public class Keyboard {
         KeyCode skill1 = KeyCode.Q;
         skillKeyCode.Add(skill1);
 
-        KeyCode skill2 = KeyCode.Space;
+        KeyCode skill2 = KeyCode.C;
         skillKeyCode.Add(skill2);
     }
 }

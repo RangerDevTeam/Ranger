@@ -17,7 +17,6 @@ namespace Spine.Unity.Examples {
 
 		void Start () {
 			bone = skeletonAnimation.Skeleton.FindBone(boneName);
-//			skeletonAnimation.skeleton.FindIkConstraint ("aiming gun constraint").Mix = 1;
 		}
 
 		void Update () {

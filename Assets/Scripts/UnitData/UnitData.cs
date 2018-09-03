@@ -54,6 +54,9 @@ public class UnitData : MonoBehaviour {
         SkillData firstSkill = new SkillData(this,100,1);
         mySkillDatas.Add(firstSkill);
         firstSkill.animationName = "meleeSwing2";
+        SkillData rollSkill = new SkillData(this, 2, 1);
+        mySkillDatas.Add(rollSkill);
+        rollSkill.animationName = "roll";
     }
 
 
