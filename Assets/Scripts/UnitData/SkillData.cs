@@ -102,7 +102,7 @@ public class SkillData {
     void HurtUnit(Spine.TrackEntry trackEntry, Spine.Event e)
     {
         if (e.data.name != "atk01") return;
-        
+        target.GetHurt(RangeDamageCount.DamageCount.CountDamge(this,target));
     }
 
 
