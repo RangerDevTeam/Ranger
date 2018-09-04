@@ -8,7 +8,9 @@
 		{"attID":5,"attName":"spirit","minValue":0,"maxValue":250},
 		{"attID":6,"attName":"temperature","minValue":-255,"maxValue":255},
 		{"attID":7,"attName":"hunger","minValue":0,"maxValue":250},
-		{"attID":8,"attName":"thirsty","minValue":0,"maxValue":250}
+		{"attID":8,"attName":"thirsty","minValue":0,"maxValue":250},
+		{"attID":9,"attName":"critical","minValue":0,"maxValue":250},
+		{"attID":10,"attName":"dodge","minValue":0,"maxValue":250}
 	]
 
 }

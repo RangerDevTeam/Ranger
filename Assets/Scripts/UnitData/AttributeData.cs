@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class AttributeData
 {
-   Dictionary<string,AttributeSingleData> unitAttData  = new Dictionary<string, AttributeSingleData>();//总属性
+   public Dictionary<string,AttributeSingleData> unitAttData  = new Dictionary<string, AttributeSingleData>();//总属性
    Dictionary<string, AttributeSingleData> equipAttData = new Dictionary<string, AttributeSingleData>();//装备属性
    Dictionary<string, AttributeSingleData> buffAttData = new Dictionary<string, AttributeSingleData>();//buff属性
    Dictionary<string, AttributeSingleData> baseAttData = new Dictionary<string, AttributeSingleData>();//基础属性
@@ -81,19 +81,26 @@ public class AttributeData
     }
 
     //通过ID修改属性---按值变化
-    void ChangeAttAsNumber(Dictionary<string, AttributeSingleData> dictionary,uint id,int value)
+    public int ChangeAttAsNumber(Dictionary<string, AttributeSingleData> dictionary,uint id,int value)
     {
         CreateDic(dictionary, new AttributeSingleData(id));//没有就创建一个属性
         dictionary[id.ToString()].attValue += value;
+        return dictionary[id.ToString()].attValue;
     }
 
     //通过名字修改属性---按百分比变化
-    int ChangeAttAsPercent(Dictionary<string, AttributeSingleData> dictionary, uint id, int value)
+    public int ChangeAttAsPercent(Dictionary<string, AttributeSingleData> dictionary, uint id, int value)
     {
         CreateDic(dictionary, new AttributeSingleData(id));//没有就创建一个属性
         dictionary[id.ToString()].attValue = (int)(dictionary[id.ToString()].attValue * ((float)(100 + value)/100));
         return dictionary[id.ToString()].attValue;
     }
+
+    public int GetAttValue(uint id)
+    {
+        return unitAttData[id.ToString()].attValue;
+    }
+
 
     //设置所有字典某个属性的区间
     public void SetMaxValue(uint id,int minValue,int maxValue)

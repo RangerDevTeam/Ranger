@@ -11,6 +11,8 @@ public class UnitData : MonoBehaviour {
     public AnimationData animationData;
     public AttributeData mAttData;
 
+    public int health = 100;
+
     public enum UnitStateType : uint
     {
         idle =0,
@@ -58,6 +60,20 @@ public class UnitData : MonoBehaviour {
         mySkillDatas.Add(rollSkill);
         rollSkill.animationName = "roll";
     }
+
+
+    //受伤
+    public void GetHurt(RangeDamageCount.AttackResult result)
+    {
+        health -= result.healthNumber;
+        if (health <= 0) Die();
+    }
+
+    void Die()
+    {
+
+    }
+
 
 
 }
