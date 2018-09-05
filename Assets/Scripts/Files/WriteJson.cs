@@ -17,7 +17,7 @@ public static class JsonFileDeal<T>{
             File.Delete(savePath);
         }
 
-        string json = JsonUtility.ToJson(jsonObj);
+        string json = JsonMapper.ToJson(jsonObj);
         File.WriteAllText(savePath,json);
         return true;
     }
