@@ -20,13 +20,13 @@ public class Keyboard {
         SkillKeycodeKey loadedKeys = JsonFileDeal<SkillKeycodeKey>.ReadJsonFile("SkillKeycodeKey");
         if (loadedKeys == null)
         {
-            CreateDefaultSkillKey();
+            CreateDefaultKey();
         }
         else
         {
             for (int i = 0; i < loadedKeys.skillKeys.Count; i++)
             {
-                CreateSkillKeyCode(loadedKeys.skillKeys[i].skillID, loadedKeys.skillKeys[i].keyCode);
+                CreateKeyBoardData(loadedKeys.skillKeys[i].skillID, loadedKeys.skillKeys[i].keyCode, loadedKeys.skillKeys[i].keyCodeType);
             }
         }
     }
@@ -44,12 +44,14 @@ public class Keyboard {
         skillKeyCodeDic.Add(keyCodeName, data);
     }
 
-    //创建技能键
-    void CreateSkillKeyCode(uint skillID,KeyCode keyCode)
+    //创建新按键功能类
+    void CreateKeyBoardData(uint skillID,KeyCode keyCode,string keyCodeType)
     {
         KeyBoardData t = new KeyBoardData();
         t.skillID = skillID;
         t.keyCode = keyCode;
+        t.showKeyCode = keyCode;
+        t.keyCodeType = keyCodeType;
         CreateDic(t.keyCode.ToString(),t);
     }
 
@@ -65,71 +67,59 @@ public class Keyboard {
     }
 
     //创建默认技能键
-    void CreateDefaultSkillKey()
+    void CreateDefaultKey()
     {
-        CreateSkillKeyCode(1, KeyCode.Q);
-        CreateSkillKeyCode(2, KeyCode.R);
-        CreateSkillKeyCode(3, KeyCode.C);
+        CreateKeyBoardData(0,KeyCode.A,"moveLeft");
+        CreateKeyBoardData(0, KeyCode.D, "moveRight");
+        CreateKeyBoardData(0, KeyCode.S, "moveDown");
+        CreateKeyBoardData(0, KeyCode.W, "moveUp");
+        CreateKeyBoardData(0, KeyCode.Space, "pickUp");
 
-        SaveSkillKey();
+        CreateKeyBoardData(1, KeyCode.Q,"skill");
+        CreateKeyBoardData(2, KeyCode.R,"skill");
+        CreateKeyBoardData(3, KeyCode.C,"skill");
+
+        SaveKey();
     }
 
-    //修改技能键
-    public void ChangeSkillKey(uint skillID, KeyCode keyCode)
+    //修改按键（UI表面上的）
+    public void ChangeKey(KeyCode keyCode,KeyBoardData t)
     {
-        if (skillKeyCodeDic[keyCode.ToString()].skillID == skillID)
-            return;
-        bool haveKey = false;
-        string oldKey = null;
-        foreach (string key in skillKeyCodeDic.Keys)
+        t.showKeyCode = keyCode;
+        string keyCodeName = keyCode.ToString();
+        //要设置的按键原先有功能类
+        if (skillKeyCodeDic.ContainsKey(keyCodeName))
         {
-            if (skillKeyCodeDic[key].skillID == skillID)
-            {
-                oldKey = key;
-                haveKey = true;
-            }
-        }
-        //传入的技能已有技能键
-        if (haveKey)
-        {
-            //传入的键已设置技能,则两个键交换其链接的技能
-            if (skillKeyCodeDic.ContainsKey(keyCode.ToString()))
-            {
-                skillKeyCodeDic[oldKey].skillID = skillKeyCodeDic[keyCode.ToString()].skillID;
-                skillKeyCodeDic[keyCode.ToString()].skillID = skillID;
-            }
-            //传入的键没设置技能，则传入的键链接技能，原按键取消链接
-            else
-            {
-                CreateSkillKeyCode(skillID, keyCode);
-                skillKeyCodeDic.Remove(oldKey);
-            }
-        }
-        //传入的技能没有技能键
-        else
-        {
-            //传入的键已设置技能，则去掉原技能的链接，传入的键链接传入的技能
-            if (skillKeyCodeDic.ContainsKey(keyCode.ToString()))
-            {
-                skillKeyCodeDic.Remove(keyCode.ToString());
-                CreateSkillKeyCode(skillID, keyCode);
-            }
-            //传入的键没设置技能，直接创建新链接
-            else
-            {
-                CreateSkillKeyCode(skillID, keyCode);
-            }
+            //将该功能的按键设为空值
+            skillKeyCodeDic[keyCodeName].showKeyCode = KeyCode.None;
         }
     }
 
-    //保存键位
-    public void SaveSkillKey()
+    //保存键位修改配置
+    public void SaveChangeKey(KeyBoardData t)
+    {
+        string keyCodeName = t.keyCode.ToString();
+        //如果字典里的原键位上仍是自己，则去掉
+        if (skillKeyCodeDic[keyCodeName] == t)
+            skillKeyCodeDic.Remove(keyCodeName);
+
+        //将键位改成预先设置的键位
+        t.keyCode = t.showKeyCode;
+        keyCodeName = t.keyCode.ToString();
+        
+        CreateDic(keyCodeName, t);//如果字典里没有该键位则创建一个新键位
+        skillKeyCodeDic[keyCodeName] = t;
+    }
+
+    //将键位写入Json
+    public void SaveKey()
     {
         SkillKeycodeKey key = new SkillKeycodeKey();
-        foreach (KeyBoardData t in skillKeyCodeDic.Values)
-        {
-            key.skillKeys.Add(t);
-        }
+        //foreach (KeyBoardData t in skillKeyCodeDic.Values)
+        //{
+        //    key.skillKeys.Add(t);
+        //    Debug.Log(t.keyCode + "++" + t.showKeyCode );
+        //}
 
         JsonFileDeal<SkillKeycodeKey>.WriteJsonFile(key, "SkillKeycodeKey");
     }
@@ -138,10 +128,20 @@ public class Keyboard {
     {
         public uint skillID;
         public KeyCode keyCode;
+        public KeyCode showKeyCode;
+        public string keyCodeType;
 
         public KeyBoardData()
         {
+            EventControl.Instance.ChangeKeyEvent += new EventControl.ChangeKeyHandler(JudgeKey);
+        }
 
+        public void JudgeKey(KeyCode changeKeyCode)
+        {
+            if (keyCode == changeKeyCode)
+            {
+                Keyboard.Instance.ChangeKey(changeKeyCode,this);
+            }
         }
     }
 

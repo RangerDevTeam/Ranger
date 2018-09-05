@@ -46,8 +46,8 @@ namespace RangeDamageCount
 
         static bool IsDodge(SkillData skill,UnitData tar)
         {
-            if (tar == null)
-                return;
+            //if (tar == null)
+            //    return;
             int dodoge = tar.mAttData.GetAttValue(10);
             return Random.Range(0, 100) <= dodoge ? true:false;
         }
