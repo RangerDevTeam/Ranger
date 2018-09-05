@@ -11,18 +11,19 @@ public class Keyboard {
     public static KeyCode attack = KeyCode.J;
     public static List<KeyCode> skillKeyCode = new List<KeyCode>();
 
-    Dictionary<string, uint> skillKeyCodeData = new Dictionary<string, uint>();
+    Dictionary<string, KeyBoardData> skillKeyCodeDic = new Dictionary<string, KeyBoardData>();
 
     static Keyboard instance = new Keyboard();
 
     public Keyboard()
     {
-        CreateSkillKeyCode();
+        CreateDefaultSkillKey();
+        SaveSkillKey();
         //根据数组排序来确定绑定的技能ID
-        for (int i = 0; i < skillKeyCode.Count; i++)
-        {
-            CreateDic(skillKeyCode[i].ToString(), (uint)(i + 1));
-        }
+        //for (int i = 0; i < skillKeyCode.Count; i++)
+        //{
+        //    CreateDic(skillKeyCode[i].ToString(), (uint)(i + 1));
+        //}
     }
 
     public static Keyboard Instance
@@ -31,30 +32,68 @@ public class Keyboard {
     }
 
     //创建字典
-    public void CreateDic(string keyCodeName, uint _skillID)
+    public void CreateDic(string keyCodeName, KeyBoardData data)
     {
         //如果存在，则不处理
-        if (skillKeyCodeData.ContainsKey(keyCodeName)) return;
-        skillKeyCodeData.Add(keyCodeName, _skillID);
+        if (skillKeyCodeDic.ContainsKey(keyCodeName)) return;
+        skillKeyCodeDic.Add(keyCodeName, data);
     }
 
     //获取技能
     public uint GetSkillId(string keyCodeName)
    {
         //如果存在技能
-        if (skillKeyCodeData.ContainsKey(keyCodeName))
-            return skillKeyCodeData[keyCodeName];
+        if (skillKeyCodeDic.ContainsKey(keyCodeName))
+            return skillKeyCodeDic[keyCodeName].skillID;
         else
             return 0;
     }
 
     //创建技能键
-    public void CreateSkillKeyCode()
+    void CreateSkillKeyCode(uint skillID,KeyCode keyCode)
     {
-        KeyCode skill1 = KeyCode.Q;
-        skillKeyCode.Add(skill1);
+        KeyBoardData t = new KeyBoardData();
+        t.skillID = skillID;
+        t.keyCode = keyCode;
+        CreateDic(t.keyCode.ToString(),t);
 
-        KeyCode skill2 = KeyCode.C;
-        skillKeyCode.Add(skill2);
+        //JsonFileDeal<KeyBoardData>.WriteJsonFile(t, "KeyBoardData");
+    }
+
+    //创建默认键
+    void CreateDefaultSkillKey()
+    {
+        CreateSkillKeyCode(1, KeyCode.Q);
+        CreateSkillKeyCode(2, KeyCode.R);
+        CreateSkillKeyCode(3, KeyCode.C);
+    }
+
+    //保存键位
+    void SaveSkillKey()
+    {
+        SkillKeycodeKey key = new SkillKeycodeKey();
+        foreach (KeyBoardData t in skillKeyCodeDic.Values)
+        {
+            key.skillKey.Add(t);
+            Debug.Log(key.skillKey);
+        }
+
+        JsonFileDeal<SkillKeycodeKey>.WriteJsonFile(key, "SkillKeycodeKey");
+    }
+
+    public class KeyBoardData
+    {
+        public uint skillID;
+        public KeyCode keyCode;
+
+        public KeyBoardData()
+        {
+
+        }
+    }
+
+    public class SkillKeycodeKey
+    {
+        public List<KeyBoardData> skillKey = new List<KeyBoardData>();
     }
 }
