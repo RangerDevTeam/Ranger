@@ -41,7 +41,7 @@ public class CharactorControl : UnitData {
             {
                 if (Input.GetKeyDown(keyCode) && PlayerStateMachine.CurrentStateID == (uint)UnitStateType.idle)
                 {
-                    uint skillID = Keyboard.Instance.GetSkillId(keyCode.ToString());
+                    uint skillID = Keyboard.Instance.GetSkillId(keyCode);
                     for (int i = 0; i < mySkillDatas.Count; i++)
                     {
                         if (mySkillDatas[i].skillId == skillID)
